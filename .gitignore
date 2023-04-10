@@ -1,0 +1,27 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# Distribution / packaging
+.Python
+build/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+venv/
+.env
+
+### PyCharm+all Patch ###
+# Ignores the whole .idea folder and all .iml files
+.idea/
+
+## certifcate generated using OPENSSH
+certificate/

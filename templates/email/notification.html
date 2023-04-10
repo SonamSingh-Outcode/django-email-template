@@ -1,0 +1,28 @@
+{% extends 'email/base.html' %}
+
+{% block header-footer %}
+
+
+{% if url and button_name %}
+<tr style="padding: 0">
+    <td align="center" valign="middle" class="inner-td-second">
+        <br aria-hidden="true">
+        <table align="center" border="0" cellspacing="0" cellpadding="0"
+               class="inner-table-container-second" width="340">
+            <tbody>
+            <tr style="padding: 0">
+                <td align="center" bgcolor="#79BCB0" valign="middle" class="inner-td-third">
+                    <a href="{{ url }}" rel="noopener noreferrer"
+                       target="_blank"
+                       class="cta-btn"
+                    >{{ button_name }}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+{% endif %}
+
+
+{% endblock header-footer %}

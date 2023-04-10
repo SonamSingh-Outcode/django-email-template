@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .email-container {
+            width: 100% !important;
+            min-width: 100%;
+            color: #0a0836;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0
+        }
+
+        .center-style {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        .table-container {
+            height: 423px;
+            width: 100%;
+        }
+
+        .table-layout-container {
+            table-layout: fixed;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            min-width: 100%;
+            color: rgb(10, 8, 54);
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0px;
+            padding: 0px;
+            width: 100% !important;
+            transform-origin: left top;
+        }
+
+        .td-container {
+            word-break: break-word;
+            border-collapse: collapse !important;
+            padding: 10px 10px 0;
+            font-size: smaller;
+        }
+
+        .logo-tag {
+            color: #7abdb0 !important
+        }
+
+        .logo-img {
+            max-width: 100%;
+            outline: none;
+            text-decoration: none;
+            vertical-align: middle;
+            border: none;
+            height: 50px !important;
+            min-height: auto;
+            min-width: auto;
+        }
+
+        .td-styled-container {
+            word-break: break-word;
+            border-collapse: collapse !important;
+            width: 100% !important;
+            min-width: 100%;
+            margin: 0;
+            padding: 20px 10px 30px
+        }
+
+        .inner-table-container {
+            max-width: 580px;
+            table-layout: auto;
+            border-spacing: 0;
+            border-collapse: collapse;
+            border-radius: 10px;
+            padding: 0
+        }
+
+        .inner-td {
+            width: 80%;
+            word-break: break-word;
+            border-collapse: collapse !important;
+            padding: 25px 50px
+        }
+
+        .inner-paragraph {
+            font-size: 14px;
+            padding-bottom: 10px;
+            margin: 0
+        }
+
+        .inner-td-second {
+            word-break: break-word;
+            border-collapse: collapse !important;
+            padding: 0
+        }
+
+        .inner-table-container-second {
+            table-layout: auto;
+            border-spacing: 0;
+            border-collapse: separate;
+            width: auto;
+            padding-bottom: 20px;
+        }
+
+        .inner-td-third {
+            word-break: break-word;
+            border-collapse: collapse !important;
+            border-radius: 25px;
+            padding: 10px 25px
+        }
+
+        .cta-btn {
+            color: #fff !important;
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .inner-td-forth {
+            word-break: break-word;
+            border-collapse: collapse !important;
+            padding: 0 40px 30px
+        }
+
+        .inner-table-container-third {
+            table-layout: auto;
+            border-spacing: 0;
+            border-collapse: collapse;
+            padding: 0
+        }
+
+        .inner-td-fifth {
+            word-break: break-word;
+            border-collapse: collapse !important;
+            border-top-width: 1px;
+            border-top-color: #e4e4e9;
+            border-top-style: solid;
+            font-size: 12px;
+            line-height: 1.5;
+            padding: 20px 0 0
+        }
+    </style>
+</head>
+<body>
+<div bgcolor="#E7EDEB" class="email-container">
+    <center class="center-style">
+        <div class="zVKDv" has-hovered="true" class="table-container">
+            <table bgcolor="#f6fafb" border="0" cellpadding="0" cellspacing="0" height="100%"
+                   min-scale="0.6" class="table-layout-container">
+                <tbody>
+                <tr style="padding: 0">
+                    <td align="center"
+                        valign="top"
+                        class="td-container">
+                        <a href="#" rel="noopener noreferrer" target="_blank" class="logo-tag">
+                            <img src="https://uploads-ssl.webflow.com/62cc9bca38777712833916dd/62d8517e15788d3531aefe90_outcodeLogos-01.png"
+                                 alt="Example Stamp Png Transparent, Png Download@kindpng.com" alt="Example"
+                                 naturalheight="0"
+                                 naturalwidth="0" class="logo-img"
+                                 title="Example company">
+                        </a>
+                    </td>
+                </tr>
+                <tr style="padding: 0">
+                    <td align="center" class="td-styled-container" valign="top">
+                        <table bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" class="inner-table-container">
+                            <tbody>
+                            <tr style="padding: 0">
+                                <td align="left" valign="middle" class="inner-td">
+                                    <h1>
+                                        Hi
+                                        {% if first_name %}{{ first_name }}{% else %}there{{ first_name }}{% endif %},
+                                    </h1>
+                                </td>
+                            </tr>
+                            {% block header-footer %}{% endblock header-footer %}
+
+                            </tbody>
+                            <tr style="padding: 0; margin: 50px 0">
+                                <td align="left" class="inner-td-forth" valign="middle">
+                                    <table border="0" cellpadding="0" cellspacing="0"
+                                           class="inner-table-container-third" width="50%">
+                                        <tbody>
+                                        <tr style="padding:0">
+                                            <td align="left" class="inner-td-fifth" valign="middle">
+                                                <strong>Thanks,</strong>
+                                                <br aria-hidden="true">
+                                                Company Name
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="padding: 5px;">
+                    <td align="center"
+                        valign="top"
+                        class="td-container">
+                        <p> This is an auto generated e-mail. Please do not reply to this e-mail.</p>
+                        <p>Copyright &copy; 2023 COMPANY NAME.</p>
+                        <p>XYZ XXXX Street, City Name, ZIP CODE XXXX</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </center>
+</div>
+</body>
+</html>

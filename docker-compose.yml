@@ -1,0 +1,39 @@
+version: '3.10'
+
+volumes:
+  data:
+
+networks:
+  boilerplate:
+    driver: bridge
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/email-boilerplate
+    env_file: .env
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    container_name: boilerplate-api
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - boilerplate
+
+  db:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    container_name: boilerplate-db
+    ports:
+      - "5433:5432"
+    volumes:
+      - data:/var/lib/postgresql
+    networks:
+      - boilerplate

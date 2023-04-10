@@ -1,0 +1,11 @@
+.git/
+*.pyc
+*.md
+db.sqlite3
+.dbdata
+venv/
+.gitignore
+.env.example
+README.md
+requirements/
+.idea/
